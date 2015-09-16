@@ -213,7 +213,7 @@ open class PageControl(context: Context, attrs: AttributeSet) : LinearLayout(con
                 val border = mRingBorder
                 val rect = RectF(border.toFloat(), border.toFloat(), border.toFloat(), border.toFloat())
                 val rr = RoundRectShape(outerR, rect, outerR)
-                val drawable = ShapeDrawable(rr);
+                val drawable = ShapeDrawable(rr)
                 drawable.getPaint().setColor(mColorNormalDefault)
         }
         val drawablePressed = ShapeDrawable()
