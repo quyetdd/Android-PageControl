@@ -209,9 +209,9 @@ open class PageControl(context: Context, attrs: AttributeSet) : LinearLayout(con
         } else {
         
                
-                val outerR = float[]{mRingCircle,mRingCircle,mRingCircle,mRingCircle,mRingCircle,mRingCircle,mRingCircle,mRingCircle}
+                val outerR = float[]{mRingCircle.toFloat(),mRingCircle.toFloat(),mRingCircle.toFloat(),mRingCircle.toFloat(),mRingCircle.toFloat(),mRingCircle.toFloat(),mRingCircle.toFloat(),mRingCircle.toFloat()}
                 val border = mRingBorder
-                val rect = RectF(border, border, border, border)
+                val rect = RectF(bordertoFloat(), border.toFloat(), border.toFloat(), border.toFloat()): RectF
                 val rr = RoundRectShape(outerR, rect, outerR)
                 val drawable = ShapeDrawable(rr);
                 drawable.getPaint().setColor(mColorNormalDefault)
