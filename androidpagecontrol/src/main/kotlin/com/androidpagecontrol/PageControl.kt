@@ -32,6 +32,7 @@ import android.content.res.Resources
 import android.content.res.TypedArray
 import android.graphics.drawable.shapes.Shape
 import android.graphics.drawable.shapes.RectShape
+import android.graphics.drawable.shapes.RoundRectShape;
 
 /**
  * View which has circle-formed page indicator.
@@ -49,6 +50,8 @@ open class PageControl(context: Context, attrs: AttributeSet) : LinearLayout(con
     private var mColorCurrentPressed: Int
     private var mColorNormalDefault: Int
     private var mColorNormalPressed: Int
+    private var mRingBorder: Int
+    private var mRingCircle: Int
     private var mIndicatorsClickable: Boolean
     private var mIndicatorsEnabled: Boolean
 
@@ -196,6 +199,18 @@ open class PageControl(context: Context, attrs: AttributeSet) : LinearLayout(con
         val drawableDefault = ShapeDrawable()
         drawableDefault.setShape(getIndicatorShape())
         drawableDefault.getPaint()?.setColor(if (isCurrent) mColorCurrentDefault else mColorNormalDefault)
+        if (isCurrent) {
+         drawableDefault.getPaint().setColor(mColorCurrentDefault)
+        } else {
+        
+                val r = mRingCircle
+                val outerR = float[]{r, r, r, r, r, r, r, r}
+                val border = mRingBorder
+                val rect = RectF(border, border, border, border)
+                val rr = RoundRectShape(outerR, rect, outerR)
+                val drawable = ShapeDrawable(rr);
+                drawable.getPaint().setColor(mColorNormalDefault)
+        }
         val drawablePressed = ShapeDrawable()
         drawablePressed.setShape(getIndicatorShape())
         drawablePressed.getPaint()?.setColor(if (isCurrent) mColorCurrentPressed else mColorNormalPressed)
