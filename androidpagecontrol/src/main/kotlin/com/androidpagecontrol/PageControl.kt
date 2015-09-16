@@ -22,6 +22,8 @@ import android.graphics.drawable.StateListDrawable
 import android.graphics.drawable.shapes.OvalShape
 import android.os.Build
 import android.graphics.Rect
+import android.graphics.Typeface;
+import android.graphics.RectF
 import android.support.v4.view.ViewPager
 import android.util.AttributeSet
 import android.util.TypedValue
@@ -208,7 +210,8 @@ open class PageControl(context: Context, attrs: AttributeSet) : LinearLayout(con
          drawableDefault.getPaint().setColor(mColorCurrentDefault)
         } else {
         
-                var r = mRingCircle.toFloat()
+                val r:Float
+                r =  mRingCircle.toFloat()
                 val outerR = float[]{r,r,r,r,r,r,r,r}
                 val border = mRingBorder
                 val rect = RectF(border.toFloat(), border.toFloat(), border.toFloat(), border.toFloat())
