@@ -28,8 +28,10 @@
         <attr name="apc_currentIndicatorSize" format="reference|dimension" />
         <attr name="apc_colorCurrentDefault" format="reference|color" />
         <attr name="apc_colorCurrentPressed" format="reference|color" />
-        <attr name="apc_colorNormalDefault" format="reference|drawable" />
+        <attr name="apc_colorNormalDefault" format="reference|color" />
         <attr name="apc_colorNormalPressed" format="reference|color" />
+        <attr name="apc_ringCircle" format="reference|dimension" />
+        <attr name="apc_ringBorder" format="reference|dimension" />
     </declare-styleable>
 
 </resources>
