@@ -118,8 +118,8 @@ open class PageControl(context: Context, attrs: AttributeSet) : LinearLayout(con
                 mColorCurrentPressed = a.getColor(R.styleable.AndroidPageControl_apc_colorCurrentPressed, r.getColor(R.color.apc_indicator_current_pressed))
                 mColorNormalDefault = a.getColor(R.styleable.AndroidPageControl_apc_colorNormalDefault, r.getColor(R.color.apc_indicator_normal_default))
                 mColorNormalPressed = a.getColor(R.styleable.AndroidPageControl_apc_colorNormalPressed, r.getColor(R.color.apc_indicator_normal_pressed))
-                mRingBorder = a.getInt(R.styleable.AndroidPageControl_apc_ringBorder)
-                mRingCircle = a.getInt(R.styleable.AndroidPageControl_apc_ringcircle)
+                mRingBorder = a.getDimension(R.styleable.AndroidPageControl_apc_ringBorder,2)
+                mRingCircle = a.getDimension(R.styleable.AndroidPageControl_apc_ringcircle,8)
 
                 a.recycle()
             }
