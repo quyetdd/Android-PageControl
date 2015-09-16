@@ -211,8 +211,8 @@ open class PageControl(context: Context, attrs: AttributeSet) : LinearLayout(con
         } else {
         
                mRingCircle.toFloat()
-                val outerR = Float[]{mRingCircle.toFloat(),mRingCircle.toFloat(),mRingCircle.toFloat()
-                ,mRingCircle.toFloat(),mRingCircle.toFloat(),mRingCircle.toFloat(),mRingCircle.toFloat()
+                val outerR = Float[]{mRingCircle.toFloat(),mRingCircle.toFloat(),mRingCircle.toFloat();
+                ,mRingCircle.toFloat(),mRingCircle.toFloat(),mRingCircle.toFloat(),mRingCircle.toFloat();
                 ,mRingCircle.toFloat()}
                 val border = mRingBorder.toFloat()
                 val rect = RectF(border.toFloat(), border.toFloat(), border.toFloat(), border.toFloat())
