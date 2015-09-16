@@ -51,8 +51,8 @@ open class PageControl(context: Context, attrs: AttributeSet) : LinearLayout(con
     private var mColorCurrentPressed: Int
     private var mColorNormalDefault: Int
     private var mColorNormalPressed: Int
-    private var mRingBorder: Int
-    private var mRingCircle: Int
+    private var mRingBorder: Float
+    private var mRingCircle: Float
     private var mIndicatorsClickable: Boolean
     private var mIndicatorsEnabled: Boolean
 
@@ -73,8 +73,8 @@ open class PageControl(context: Context, attrs: AttributeSet) : LinearLayout(con
         mColorCurrentDefault = 0
         mColorCurrentPressed = 0
         mColorNormalDefault = 0
-        mRingBorder = 2
-        mRingCircle = 8
+        mRingBorder = 2.toFloat()
+        mRingCircle = 8.toFloat()
         mColorNormalPressed = 0
         mIndicatorsClickable = true
         mIndicatorsEnabled = true
