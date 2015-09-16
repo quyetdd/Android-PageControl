@@ -208,7 +208,7 @@ open class PageControl(context: Context, attrs: AttributeSet) : LinearLayout(con
          drawableDefault.getPaint().setColor(mColorCurrentDefault)
         } else {
         
-                var r = mRingCircle.tofloat()
+                var r = mRingCircle.toFloat()
                 val outerR = float[]{r,r,r,r,r,r,r,r}
                 val border = mRingBorder
                 val rect = RectF(border.toFloat(), border.toFloat(), border.toFloat(), border.toFloat())
