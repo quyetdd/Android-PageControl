@@ -21,6 +21,7 @@ import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.StateListDrawable
 import android.graphics.drawable.shapes.OvalShape
 import android.os.Build
+import android.graphics.Rect
 import android.support.v4.view.ViewPager
 import android.util.AttributeSet
 import android.util.TypedValue
@@ -118,8 +119,8 @@ open class PageControl(context: Context, attrs: AttributeSet) : LinearLayout(con
                 mColorCurrentPressed = a.getColor(R.styleable.AndroidPageControl_apc_colorCurrentPressed, r.getColor(R.color.apc_indicator_current_pressed))
                 mColorNormalDefault = a.getColor(R.styleable.AndroidPageControl_apc_colorNormalDefault, r.getColor(R.color.apc_indicator_normal_default))
                 mColorNormalPressed = a.getColor(R.styleable.AndroidPageControl_apc_colorNormalPressed, r.getColor(R.color.apc_indicator_normal_pressed))
-                mRingBorder = a.getDimension(R.styleable.AndroidPageControl_apc_ringBorder,2)
-                mRingCircle = a.getDimension(R.styleable.AndroidPageControl_apc_ringcircle,8)
+                mRingBorder = a.getDimension(R.styleable.AndroidPageControl_apc_ringBorder,2.0.toFloat())
+                mRingCircle = a.getDimension(R.styleable.AndroidPageControl_apc_ringCircle,8.0.toFloat())
 
                 a.recycle()
             }
@@ -207,8 +208,8 @@ open class PageControl(context: Context, attrs: AttributeSet) : LinearLayout(con
          drawableDefault.getPaint().setColor(mColorCurrentDefault)
         } else {
         
-                val r = mRingCircle
-                val outerR = float[]{r, r, r, r, r, r, r, r}
+               
+                val outerR = float[]{mRingCircle,mRingCircle,mRingCircle,mRingCircle,mRingCircle,mRingCircle,mRingCircle,mRingCircle}
                 val border = mRingBorder
                 val rect = RectF(border, border, border, border)
                 val rr = RoundRectShape(outerR, rect, outerR)
